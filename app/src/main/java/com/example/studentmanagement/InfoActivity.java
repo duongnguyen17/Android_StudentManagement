@@ -65,7 +65,7 @@ public class InfoActivity extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Student student=new Student(id, String.valueOf(edtName.getText()), address, email);
+                Student student=new Student(id, String.valueOf(edtName.getText()), String.valueOf(edtAddress.getText()), String.valueOf(edtEmail.getText()));
                 db.updateStudent(student);
                 Intent intent=new Intent(InfoActivity.this, ManagementActivity.class);
                 startActivity(intent);
